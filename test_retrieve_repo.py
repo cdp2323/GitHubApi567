@@ -5,7 +5,7 @@ from retrive_repo import get_commits, get_repo, get_api, get_output
 
 class TestGithub_Repo_list(unittest.TestCase):
 
-    def test_get_Github_API(self):
+    def test_get_api(self):
         userID = 'cdp2323'
         response = requests.get("https://api.github.com/users/{}/repos".format(userID))
         response = response.json()
@@ -15,7 +15,7 @@ class TestGithub_Repo_list(unittest.TestCase):
         else:
             self.assertEqual(get_api('cdp2323'), None)
 
-    def test_get_repo_list(self):
+    def test_get_repo(self):
         userID = 'cdp2323'
         response = requests.get("https://api.github.com/users/{}/repos".format(userID))
         response = response.json()
@@ -24,7 +24,7 @@ class TestGithub_Repo_list(unittest.TestCase):
             list1 = get_repo(response)
             self.assertEqual(get_repo(response), list1)
 
-    def test_get_repo_commits_number(self):
+    def test_get_commits(self):
         userID = 'cdp2323'
         response = requests.get("https://api.github.com/users/{}/repos".format(userID))
         response = response.json()
@@ -33,7 +33,7 @@ class TestGithub_Repo_list(unittest.TestCase):
             list2 = get_commits(userID, list1)
             self.assertEqual(get_commits(userID, list1), list2)
 
-    def test_get_output_list(self):
+    def test_get_output(self):
         userID = 'cdp2323'
         response = requests.get("https://api.github.com/users/{}/repos".format(userID))
         response = response.json()
