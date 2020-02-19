@@ -1,9 +1,9 @@
 import unittest
 import requests
-from retrive_repo import get_commits, get_repo, get_api, get_output
+from retrieve_repo import get_commits, get_repo, get_api, get_output
 
 
-class Test_retrive_repo(unittest.TestCase):
+class TestRetrive_Repo(unittest.TestCase):
 
     def test_get_api(self):
         userID = 'cdp2323'
