@@ -3,7 +3,7 @@ import requests
 from retrive_repo import get_commits, get_repo, get_api, get_output
 
 
-class TestGithub_Repo_list(unittest.TestCase):
+class Test_retrive_repo(unittest.TestCase):
 
     def test_get_api(self):
         userID = 'cdp2323'
