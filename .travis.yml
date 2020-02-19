@@ -4,4 +4,4 @@ python:
 
 # command to run tests
 script:
- - python -m unittest TestRetrieve_Repo
+ - python -m unittest test_retrive_repo
