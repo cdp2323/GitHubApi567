@@ -1,4 +1,3 @@
-# GitHub API: https://api.github.com/users/<ID>/repos
 """
 author: danping cai
 """
